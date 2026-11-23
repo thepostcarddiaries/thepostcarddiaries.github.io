@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- DOCTYPE: must be the first - tells the browser this is a webpage -->
+<html lang="en">
+<!-- head: holds the bts info-->
+
+<head>
+    <!-- UTF-8: lets the page show all characters like accents and Japanese -->
+    <meta charset="UTF-8">
+    <!-- viewport: makes the page fit properly on mobiles and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title: is the text shown on the browser tab -->
+    <title>The Postcard Diaries</title>
+    <!-- link: connects the CSS file that styles the page. rel = what the file is (a stylesheet), href = where the file is -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- body: holds everything you see on the page -->
+
+<body>
+    <!-- header: top bar at the top of each page - with site name and menu -->
+    <header>
+        <h1>The Postcard Diaries</h1>
+        <!-- nav: menu that links to the other pages -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="top-picks.html">Top Picks</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Banner: full width picture, src = source, image file location, alt = description for screenreaders -->
+    <img src="images/home/banner-biei-red-torii.jpg" alt="Red torii gate in the fields of Biei, Hokkaido" width="100%"
+        class="banner">
+    <!-- main: the main page content -->
+    <main>
+        <h2>Latest postcards</h2>
+        <!-- article: is one postcard = postcard image wrapped in a link - e.g: Uji post.-->
+        <article>
+            <a href="posts/uji.html">
+                <img src="images/home/postcard-uji.jpg" alt="Uji: The Home of Matcha and a Calmer Side of Kyoto"
+                    width="300">
+            </a>
+        </article>
+
+        <article>
+            <a href="posts/kamakura.html">
+                <img src="images/home/postcard-kamakura.jpg" alt="Kamakura: Temples, Street Food and Sea Breezes"
+                    width="300">
+            </a>
+        </article>
+
+        <article>
+            <a href="posts/nara.html">
+                <img src="images/home/postcard-nara.jpg" alt="Nara: Cute Deer, Ancient Temples and a Hidden Café"
+                    width="300">
+            </a>
+        </article>
+
+
+        <article>
+
+            <a href="posts/biei-furano.html">
+
+                <img src="images/home/postcard-biei-furano.jpg"
+                    alt="Biei and Furano: Blue Ponds, Flower Fields and Farmland" width="300">
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="posts/sapporo.html">
+
+
+                <img src="images/home/postcard-sapporo.jpg"
+                    alt="Sapporo: The TV Tower, Tanukikoji and Some of Japan's Best Food" width="300">
+
+
+            </a>
+
+        </article>
+
+    </main>
+
+    <!-- footer: the bottom bar with copyright info -->
+
+    <footer>
+
+        <p>&copy; 2026 The Postcard Diaries</p>
+
+    </footer>
+</body>
+
+</html>

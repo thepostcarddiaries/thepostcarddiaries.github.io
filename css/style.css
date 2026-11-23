@@ -1,0 +1,506 @@
+/* body: background colour, font and text colour for the whole page */
+body {
+    background-color: oldlace;
+    font-family: Georgia, serif;
+    color: black;
+    margin: 0;
+}
+
+/* header: the top bar with the site name and menu */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* nav links: remove underline and spaces them out */
+nav a {
+    color: sienna;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* main: centres the content and stops it getting too wide on large screens */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* article: each postcard sits side by side as a white card */
+article {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    background-color: white;
+    vertical-align: top;
+}
+
+/* postcard titles: sienna colour, no underline */
+article a {
+    color: sienna;
+    text-decoration: none;
+
+}
+
+/* footer: centred text at the bottom of the page */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: sienna;
+}
+
+/* table centred, full width, single lines between cells */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/* th and td: space inside each cell and a thin line around it */
+th,
+td {
+    padding: 10px;
+    border: 1px solid tan;
+}
+
+/* th: heading row in sienna with white text */
+th {
+    background-color: sienna;
+    color: white;
+}
+
+/* table links: sienna, no underline */
+td a {
+    color: sienna;
+    text-decoration: none;
+}
+
+/* form: white box, left-aligned text, not too wide */
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+/* input and textarea: full width boxes with a thin border */
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid tan;
+    box-sizing: border-box;
+    /* keeps the boxes inside the white form */
+}
+
+/* button: sienna with white text */
+button {
+    background-color: sienna;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* post: blog post pages, narrower and left-aligned so long text is easy to read */
+.post {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+    /* more space between lines */
+}
+
+/* ===== Laptop layout and phone spacing ===== */
+/* banner: full width, edge to edge, showing the whole photo (no cropping) */
+.banner {
+    display: block;
+    width: 100%;
+}
+
+/* post pages: a white "page" in the middle, like a postcard on a table */
+.post {
+    max-width: 1000px;
+    margin: 60px auto;
+    /* cream gap above and below the white page */
+    background-color: white;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+
+/* post photos: never taller than 650px, so tall photos fit on a laptop screen */
+.post img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 650px;
+    margin: 0 auto;
+}
+
+/* forms on post and About pages: line up with the text */
+.post form {
+    margin: 0;
+    padding: 0;
+}
+
+/* button: same font as the rest of the page */
+button {
+    font-family: inherit;
+}
+
+/* postcards: bigger, so 2 sit side by side on a laptop and line up with the banner */
+article {
+    width: 483px;
+    max-width: 100%;
+    /* never wider than the screen, so phones show 1 per row */
+    box-sizing: border-box;
+}
+
+/* postcard pictures: fill the postcard */
+article img {
+    width: 100%;
+}
+
+/* table cells: text starts on the left so long sentences are easy to read */
+td {
+    text-align: left;
+}
+
+/* main: wide enough for 2 big postcards side by side, no extra space at the top */
+main {
+    max-width: 1100px;
+    padding-top: 0;
+}
+
+/* media query: phones only. Anything in here only works on screens 600px wide or less */
+@media (max-width: 600px) {
+
+    /* postcards: no side gaps, so one fits the screen neatly. No gap on top, gap underneath */
+    article {
+        margin: 0 0 20px 0;
+    }
+
+    /* headings: cream space above (under the banner) and a smaller gap below */
+    main h2 {
+        margin: 30px 0 15px 0;
+    }
+
+    /* table: smaller text and less space in each cell so it fits a phone */
+    th,
+    td {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* white page: cream border on the sides too, less padding inside */
+    .post {
+        margin: 40px 20px;
+        padding: 20px;
+    }
+}
+
+/* ===== Top Picks: category rows ===== */
+/* category rows: a thin sienna line with the group name, e.g. Snacks and sweets */
+.category td {
+    background-color: sienna;
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+
+/* ===== Top Picks: page spacing and heading ===== */
+/* Top Picks page: more cream space above the heading */
+.picks {
+
+    padding-top: 40px;
+}
+
+/* table: cream space above the table, centred, same width as the other pages */
+table {
+
+    max-width: 1000px;
+
+    margin: 30px auto 0 auto;
+}
+
+/* Top Picks heading: bigger on laptops */
+.picks h2 {
+
+    font-size: 32px;
+}
+
+/* Top Picks intro text and table text: a bit bigger on laptops */
+.picks p,
+.picks table {
+
+    font-size: 18px;
+}
+
+/* phone-only: a line break that is hidden on laptops, so the heading stays on one line */
+.phone-only {
+
+    display: none;
+}
+
+/* media query: the rules inside only work on phones (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* Top Picks: less extra space on phones, the heading space above is enough */
+
+    .picks {
+
+        padding-top: 10px;
+
+    }
+
+    /* Top Picks: normal heading and text size on phones */
+
+    .picks h2 {
+
+        font-size: 24px;
+
+    }
+
+    .picks p,
+    .picks table {
+
+        font-size: 16px;
+
+    }
+
+    /* phone-only: show the line break, so the heading splits over 2 lines */
+
+    .phone-only {
+
+        display: inline;
+
+    }
+}
+
+/* ===== Top Picks: laptop column widths and line spacing ===== */
+/* table column widths: Item 22%, My tip 50%, Where to get it 28% */
+td:nth-child(1) {
+    width: 22%;
+}
+
+td:nth-child(2) {
+    width: 50%;
+}
+
+td:nth-child(3) {
+    width: 28%;
+}
+
+/* table cells: a little more space between lines so longer tips are easy to read */
+td {
+    line-height: 1.5;
+}
+
+/* ===== Top Picks: phone table fixes ===== */
+/* media query: the rules inside only work on phones (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* table: even space inside each cell */
+    th,
+    td {
+        padding: 10px;
+    }
+
+    /* table headings: keep each heading on one line */
+    th {
+        white-space: nowrap;
+    }
+
+    /* table cells: text starts at the top of each box, normal line spacing so the table stays compact */
+    td {
+        vertical-align: top;
+        line-height: normal;
+    }
+}
+
+/* ===== Top Picks: stacked boxes on phones ===== */
+/* media query: the rules inside only work on phones (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* table: each row becomes a box stacked down the page (item, then tip, then where to get it) */
+    table,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* heading row: hidden on phones, each box has its own item name instead */
+    tr:first-child {
+        display: none;
+    }
+
+    /* each item box: thin line around it and a gap underneath */
+    tr {
+        border: 1px solid tan;
+        margin-bottom: 10px;
+    }
+
+    /* cells: no lines between them inside the box */
+    td {
+        border: none;
+        padding: 5px 10px;
+    }
+
+    /* all 3 cells: full width of the box (replaces the laptop column widths) */
+    td:nth-child(1),
+    td:nth-child(2),
+    td:nth-child(3) {
+        width: 100%;
+    }
+
+    /* item name: bold, so each box has a clear heading */
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+}
+
+/* ===== Top Picks: phone labels and sienna product names ===== */
+/* label: "Where to get it:" in each row, hidden on laptops because the heading row shows it */
+.label {
+    display: none;
+}
+
+/* media query: the rules inside only work on phones (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* item name: sienna, so it stands out as the heading of each box */
+    td:nth-child(1) {
+        color: sienna;
+    }
+
+    /* category rows: keep the white text on the sienna line */
+    .category td {
+        color: white;
+    }
+
+    /* label: show "Where to get it:" in bold, because the heading row is hidden on phones */
+    .label {
+        display: inline;
+        font-weight: bold;
+    }
+}
+
+/* ===== Top Picks: even spacing in the phone boxes ===== */
+/* media query: the rules inside only work on phones (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* cells: 8px top + 8px bottom = a 16px gap between cells, the same as one blank line (<br><br>) inside a cell */
+    td {
+        padding: 8px 10px;
+    }
+}
+
+/* caption: short italic note under a photo, smaller and grey so it doesn't look like the main text */
+.caption {
+    font-style: italic;
+    font-size: 13px;
+    color: dimgray;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ===== Post sections ===== */
+/* section headings in posts: more space above, so each heading clearly starts a new part
+   and doesn't look like a caption for the photo above it */
+.post h3 {
+    margin-top: 50px;
+
+}
+
+/* ===== Show/hide konbini picks (JavaScript feature) ===== */
+/* picks button: cream space above it, so it doesn't touch the table */
+#picksButton {
+
+    margin-top: 30px;
+}
+
+/* picks box: a white box with a thin line, same width as the table */
+#picks {
+
+    max-width: 1000px;
+
+    margin: 20px auto 0 auto;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid tan;
+
+    text-align: left;
+
+    font-size: 16px;
+    /* a little smaller than the table, so each pick fits on one line in 2 columns */
+
+    box-sizing: border-box;
+}
+
+/* picks heading: sienna like the product names, no extra space above */
+#picks h3 {
+
+    color: sienna;
+
+    margin-top: 0;
+}
+
+/* picks intro line: same text size as the list, no extra space above */
+#picks p {
+
+    font-size: inherit;
+
+    margin-top: 0;
+}
+
+/* numbered list: numbers line up, and long items wrap neatly under the text */
+#picks ol {
+
+    margin: 0;
+
+    padding-left: 25px;
+}
+
+/* each pick: the same space underneath every item */
+#picks li {
+
+    margin-bottom: 8px;
+}
+
+/* media query: phones only (screens 600px wide or less) */
+@media (max-width: 600px) {
+
+    /* picks box: same text size and padding as the table boxes on phones */
+
+    #picks {
+
+        padding: 10px;
+
+        font-size: 14px;
+
+    }
+
+    #picks h3 {
+
+        font-size: 16px;
+
+    }
+}
+
+/* media query: laptops only (screens wider than 600px) - the list splits into 2 columns of 5 */
+@media (min-width: 601px) {
+
+    #picks ol {
+
+        columns: 2;
+
+    }
+}
